@@ -1,0 +1,46 @@
+GET https://v1.hitokoto.cn/
+
+# HTTP/1.1 200 OK
+# Date: Fri, 13 Feb 2026 12:32:58 GMT
+# Content-Type: application/json; charset=utf-8
+# Transfer-Encoding: chunked
+# Connection: close
+# Server: cloudflare
+# Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+# X-Request-Id: ab1891ba-ab9d-4484-9bbb-3c55fb9e8090
+# Content-Security-Policy: default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+# Cross-Origin-Opener-Policy: same-origin
+# Cross-Origin-Resource-Policy: cross-origin
+# Origin-Agent-Cluster: ?1
+# Referrer-Policy: no-referrer
+# Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+# X-Content-Type-Options: nosniff
+# X-DNS-Prefetch-Control: off
+# X-Download-Options: noopen
+# X-Frame-Options: SAMEORIGIN
+# X-Permitted-Cross-Domain-Policies: none
+# X-XSS-Protection: 0
+# Vary: Origin, Accept-Encoding
+# Access-Control-Allow-Origin: *
+# Access-Control-Expose-Headers: X-Request-Id
+# Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=96P3UUJwypx6nkXn7Z01YtZTUgf7EHAvwRcYVdrE1otj29%2FDD0P%2F%2Fjxex1VWjzt56Sc9qzrkusQKTgmm5G2GzAZ3Y8ziPBZEYT5tBZy%2FZG%2F2PxfXvN4jMPP5"}]}
+# last-modified: Fri, 13 Feb 2026 12:32:58 GMT
+# cf-cache-status: HIT
+# Content-Encoding: gzip
+# CF-RAY: 9cd45a000825eb8f-SEA
+# alt-svc: h3=":443"; ma=86400
+
+# {
+#   "id": 4612,
+#   "uuid": "1d041940-aa6f-48a8-a8f2-2036795042ce",
+#   "hitokoto": "以必将褪色的誓言，守护无法实现的愿望",
+#   "type": "c",
+#   "from": "永远的七日之都",
+#   "from_who": null,
+#   "creator": "Amadeus",
+#   "creator_uid": 2230,
+#   "reviewer": 0,
+#   "commit_from": "web",
+#   "created_at": "1567585274",
+#   "length": 18
+# }

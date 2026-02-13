@@ -1,0 +1,21 @@
+{
+  "name": "yxswy-email",
+  "version": "1.0.0",
+  "description": "Daily hitokoto email sender with Neubrutalism design",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/send-email.ts",
+    "dev": "bun --watch src/send-email.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.15"
+  },
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.17",
+    "bun-types": "latest"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}

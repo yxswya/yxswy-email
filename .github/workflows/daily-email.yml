@@ -1,0 +1,37 @@
+name: Daily Email Sender
+
+on:
+  schedule:
+    # 每天 20:40 UTC+8（转换为 UTC 12:40）
+    - cron: '49 12 * * *'
+  workflow_dispatch:  # 支持手动触发测试
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Send daily email
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: bun run src/send-email.ts
+
+      - name: Log failure
+        if: failure()
+        run: echo "Email sending failed at $(date)"
